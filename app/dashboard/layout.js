@@ -6,9 +6,9 @@ import { SESSION_COOKIE, userFromToken } from '../../lib/auth.js';
 
 export const metadata = { title: 'Dashboard', robots: { index: false, follow: false } };
 
-export default function DashboardLayout({ children }) {
+export default async function DashboardLayout({ children }) {
   const token = cookies().get(SESSION_COOKIE)?.value;
-  const user = userFromToken(token);
+  const user = await userFromToken(token);
   if (!user) redirect('/login?next=' + encodeURIComponent('/dashboard'));
   return (
     <div className="container section--tight" style={{ paddingTop: 'calc(var(--header-h) + 40px)', paddingBottom: 80 }}>

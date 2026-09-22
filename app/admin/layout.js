@@ -4,8 +4,8 @@ import { SESSION_COOKIE, userFromToken } from '../../lib/auth.js';
 
 export const metadata = { title: 'Administration', robots: { index: false, follow: false } };
 
-export default function AdminLayout({ children }) {
-  const user = userFromToken(cookies().get(SESSION_COOKIE)?.value);
+export default async function AdminLayout({ children }) {
+  const user = await userFromToken(cookies().get(SESSION_COOKIE)?.value);
   if (!user) redirect('/login?next=' + encodeURIComponent('/admin'));
   if (user.role !== 'ADMIN') {
     return (
@@ -20,3 +20,4 @@ export default function AdminLayout({ children }) {
   }
   return <div className="container section--tight" style={{ paddingTop: 'calc(var(--header-h) + 40px)', paddingBottom: 80 }}>{children}</div>;
 }
+

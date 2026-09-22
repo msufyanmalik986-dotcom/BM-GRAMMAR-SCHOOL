@@ -29,9 +29,9 @@ export const metadata = {
   twitter: { card: 'summary', title: 'BM Grammar School Karachi', description: 'Montessori to Matric · Karachi' },
 };
 
-export default function RootLayout({ children }) {
+export default async function RootLayout({ children }) {
   const token = cookies().get(SESSION_COOKIE)?.value;
-  const user = userFromToken(token) || null;
+  const user = await userFromToken(token) || null;
   const org = {
     '@context': 'https://schema.org',
     '@type': 'EducationalOrganization',

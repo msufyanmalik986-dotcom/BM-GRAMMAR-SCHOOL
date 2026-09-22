@@ -5,7 +5,7 @@ import { db } from '../../../lib/db.js';
 
 export async function PATCH(req) {
   if (!sameOrigin(req)) return fail('Invalid request origin.', 403, 'FORBIDDEN');
-  const user = userFromToken(cookies().get(SESSION_COOKIE)?.value);
+  const user = await userFromToken(cookies().get(SESSION_COOKIE)?.value);
   if (!user) return fail('Your session has expired. Please sign in again.', 401, 'UNAUTHORIZED');
   const body = await readBody(req);
   const name = clean(body.name, 80);

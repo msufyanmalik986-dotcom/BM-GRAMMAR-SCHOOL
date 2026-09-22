@@ -7,9 +7,9 @@ export async function POST(req) {
   const body = await readBody(req);
   const email = String(body.email || '').trim().toLowerCase();
   /* Never expose account existence. */
-  const user = findUserByEmail(email);
+  const user = await findUserByEmail(email);
   if (user) {
-    const { token } = createResetToken(user.id);
+    const { token } = await createResetToken(user.id);
     const origin = req.headers.get('origin') || '';
     sendMail({
       to: email,

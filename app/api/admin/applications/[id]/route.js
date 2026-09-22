@@ -7,7 +7,7 @@ const STATUSES = ['submitted', 'under_review', 'accepted', 'rejected'];
 
 export async function PATCH(req, { params }) {
   if (!sameOrigin(req)) return fail('Invalid request origin.', 403, 'FORBIDDEN');
-  const user = userFromToken(cookies().get(SESSION_COOKIE)?.value);
+  const user = await userFromToken(cookies().get(SESSION_COOKIE)?.value);
   if (!user) return fail('Your session has expired. Please sign in again.', 401, 'UNAUTHORIZED');
   if (user.role !== 'ADMIN') return fail('Administration access is restricted.', 403, 'FORBIDDEN');
   const body = await readBody(req);

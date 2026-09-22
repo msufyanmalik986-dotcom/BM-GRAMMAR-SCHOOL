@@ -8,8 +8,8 @@ import { db, q } from '../../lib/db.js';
 
 export const metadata = { title: 'Overview — Dashboard', robots: { index: false, follow: false } };
 
-export default function DashboardOverview() {
-  const user = userFromToken(cookies().get(SESSION_COOKIE)?.value);
+export default async function DashboardOverview() {
+  const user = await userFromToken(cookies().get(SESSION_COOKIE)?.value);
   if (!user) redirect('/login');
   const apps = db.prepare(`SELECT a.*, b.name AS campus_name FROM admission_applications a JOIN branches b ON b.id = a.campus_id WHERE a.user_id = ? ORDER BY a.created_at DESC`).all(user.id);
   const pending = apps.filter((a) => a.status === 'submitted' || a.status === 'under_review').length;

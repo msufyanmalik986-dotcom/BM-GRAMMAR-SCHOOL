@@ -4,7 +4,7 @@ import { SESSION_COOKIE, userFromToken } from '../../../../lib/auth.js';
 import { db } from '../../../../lib/db.js';
 
 export async function GET(req) {
-  const user = userFromToken(cookies().get(SESSION_COOKIE)?.value);
+  const user = await userFromToken(cookies().get(SESSION_COOKIE)?.value);
   if (!user) return fail('Your session has expired. Please sign in again.', 401, 'UNAUTHORIZED');
   if (user.role !== 'ADMIN') return fail('Administration access is restricted.', 403, 'FORBIDDEN');
   const url = new URL(req.url);

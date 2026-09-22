@@ -6,8 +6,8 @@ import { db } from '../../lib/db.js';
 
 export const metadata = { title: 'Administration Overview', robots: { index: false, follow: false } };
 
-export default function AdminOverview() {
-  const user = userFromToken(cookies().get(SESSION_COOKIE)?.value);
+export default async function AdminOverview() {
+  const user = await userFromToken(cookies().get(SESSION_COOKIE)?.value);
   if (!user || user.role !== 'ADMIN') return null;
   const apps = db.prepare('SELECT COUNT(*) c FROM admission_applications').get().c;
   const pending = db.prepare("SELECT COUNT(*) c FROM admission_applications WHERE status IN ('submitted','under_review')").get().c;
@@ -46,3 +46,4 @@ export default function AdminOverview() {
     </>
   );
 }
+

@@ -11,12 +11,12 @@ export async function POST(req) {
   const password = String(body.password || '');
   const remember = body.remember !== false;
 
-  const user = findUserByEmail(email);
+  const user = await findUserByEmail(email);
   /* Constant-shape failure: do not reveal whether the account exists. */
   if (!user || !verifyPassword(password, user.password_hash)) {
     return fail('Incorrect email or password.', 401, 'UNAUTHORIZED');
   }
-  const session = createSession(user.id);
+  const session = await createSession(user.id);
   const expires = remember ? session.expires : new Date(Date.now() + 12 * 3600e3).toISOString();
   cookies().set(SESSION_COOKIE, session.token, sessionCookieOptions(expires));
   return ok({ id: user.id, name: user.name, email: user.email, role: user.role });

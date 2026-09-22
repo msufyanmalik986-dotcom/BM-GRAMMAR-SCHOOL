@@ -9,8 +9,8 @@ import { db } from '../../../../lib/db.js';
 
 export const metadata = { title: 'Application — Dashboard', robots: { index: false, follow: false } };
 
-export default function ApplicationDetailPage({ params }) {
-  const user = userFromToken(cookies().get(SESSION_COOKIE)?.value);
+export default async function ApplicationDetailPage({ params }) {
+  const user = await userFromToken(cookies().get(SESSION_COOKIE)?.value);
   if (!user) redirect('/login');
   const id = Number(params.id);
   if (!Number.isInteger(id)) notFound();

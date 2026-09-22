@@ -5,7 +5,7 @@ import { db } from '../../../lib/db.js';
 import { CLASS_OPTIONS } from '../../../lib/content.js';
 
 export async function GET() {
-  const user = userFromToken(cookies().get(SESSION_COOKIE)?.value);
+  const user = await userFromToken(cookies().get(SESSION_COOKIE)?.value);
   if (!user) return fail('Your session has expired. Please sign in again.', 401, 'UNAUTHORIZED');
   const rows = db.prepare(`SELECT a.id, a.reference_number, a.student_name, a.applying_class, a.status, a.created_at, b.name AS campus_name
     FROM admission_applications a JOIN branches b ON b.id = a.campus_id WHERE a.user_id = ? ORDER BY a.created_at DESC`).all(user.id);
@@ -15,7 +15,7 @@ export async function GET() {
 export async function POST(req) {
   if (!sameOrigin(req)) return fail('Invalid request origin.', 403, 'FORBIDDEN');
   if (!rateLimit(`apply:${clientIp(req)}`, 6, 60_000)) return fail('Too many submissions. Please wait a moment.', 429, 'RATE_LIMITED');
-  const user = userFromToken(cookies().get(SESSION_COOKIE)?.value);
+  const user = await userFromToken(cookies().get(SESSION_COOKIE)?.value);
   if (!user) return fail('Please sign in to submit your application.', 401, 'UNAUTHORIZED');
 
   let body;

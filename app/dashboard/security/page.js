@@ -5,8 +5,8 @@ import { SESSION_COOKIE, userFromToken } from '../../../lib/auth.js';
 
 export const metadata = { title: 'Security — Dashboard', robots: { index: false, follow: false } };
 
-export default function SecurityPage() {
-  const user = userFromToken(cookies().get(SESSION_COOKIE)?.value);
+export default async function SecurityPage() {
+  const user = await userFromToken(cookies().get(SESSION_COOKIE)?.value);
   if (!user) redirect('/login');
   return <SecurityClient />;
 }

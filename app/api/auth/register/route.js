@@ -18,9 +18,9 @@ export async function POST(req) {
   if (phone && !isPakPhone(phone)) return fail('Please enter a valid phone number.');
   if (password.length < 8) return fail('Password must be at least 8 characters.');
 
-  if (findUserByEmail(email)) return fail('An account with this email already exists. Please sign in instead.', 409, 'EXISTS');
-  const user = createUser({ name, email, phone, password });
-  const session = createSession(user.id);
+  if (await findUserByEmail(email)) return fail('An account with this email already exists. Please sign in instead.', 409, 'EXISTS');
+  const user = await createUser({ name, email, phone, password });
+  const session = await createSession(user.id);
   cookies().set('bmgs_session', session.token, sessionCookieOptions(session.expires));
   sendMail({ to: email, subject: 'Welcome to BM Grammar School', text: `Assalam-o-Alaikum ${name}, your BM Grammar School account is ready. You can apply online and track applications from your dashboard.` });
   return ok({ id: user.id, name: user.name, email: user.email });

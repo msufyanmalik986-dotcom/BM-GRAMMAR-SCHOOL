@@ -6,7 +6,7 @@ import { db } from '../../../../lib/db.js';
 export async function POST(req) {
   if (!sameOrigin(req)) return fail('Invalid request origin.', 403, 'FORBIDDEN');
   if (!rateLimit(`pw:${clientIp(req)}`, 5, 60_000)) return fail('Too many attempts.', 429, 'RATE_LIMITED');
-  const user = userFromToken(cookies().get(SESSION_COOKIE)?.value);
+  const user = await userFromToken(cookies().get(SESSION_COOKIE)?.value);
   if (!user) return fail('Your session has expired. Please sign in again.', 401, 'UNAUTHORIZED');
   const body = await readBody(req);
   const full = db.prepare('SELECT * FROM users WHERE id = ?').get(user.id);
