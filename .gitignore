@@ -13,3 +13,6 @@ data/*.db-shm
 data/outbox.log
 .DS_Store
 *.tsbuildinfo
+
+.vercel
+.env*
