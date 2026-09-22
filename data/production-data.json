@@ -1,0 +1,315 @@
+{
+  "branches": [
+    {
+      "id": 1,
+      "name": "Orangi Town Campus",
+      "slug": "orangi-town",
+      "address": "Plot No. 518, Sector No. 4/F, Islam Nagar, Orangi Town, Karachi",
+      "phone": "0312-2690757",
+      "latitude": null,
+      "longitude": null,
+      "map_query": "BM Grammar School, Plot No. 518, Sector 4/F, Islam Nagar, Orangi Town, Karachi",
+      "description": "The documented head campus of BM Grammar School, located in Islam Nagar, Orangi Town, Karachi.",
+      "image": null,
+      "active": 1,
+      "created_at": "2026-09-22 11:33:02",
+      "updated_at": "2026-09-22 11:33:02"
+    },
+    {
+      "id": 2,
+      "name": "Al Sadaf Colony Campus",
+      "slug": "al-sadaf-colony",
+      "address": null,
+      "phone": "0312-2690757",
+      "latitude": null,
+      "longitude": null,
+      "map_query": "BM Grammar School, Al Sadaf Colony, Orangi Town, Karachi",
+      "description": "The Al Sadaf Colony campus serves families across the colony and neighbouring blocks of Orangi Town. The precise street address is maintained on the school office record and can be confirmed by phone.",
+      "image": null,
+      "active": 1,
+      "created_at": "2026-09-22 11:33:02",
+      "updated_at": "2026-09-22 11:33:02"
+    },
+    {
+      "id": 3,
+      "name": "Mominabad Campus",
+      "slug": "mominabad",
+      "address": null,
+      "phone": "0312-2690757",
+      "latitude": null,
+      "longitude": null,
+      "map_query": "BM Grammar School, Mominabad, Karachi",
+      "description": "The Mominabad campus extends the school’s Montessori-to-Matric programme to families in Mominabad. The precise street address is maintained on the school office record and can be confirmed by phone.",
+      "image": null,
+      "active": 1,
+      "created_at": "2026-09-22 11:33:02",
+      "updated_at": "2026-09-22 11:33:02"
+    }
+  ],
+  "events": [
+    {
+      "id": 1,
+      "title": "Grand Open House",
+      "slug": "grand-open-house-ali-baba-stadium",
+      "description": "BM Grammar School hosts a large Open House gathering at Ali Baba Stadium, Orangi Town No. 4, where families can meet the school’s leadership, learn about the Montessori-to-Matric programme, and see student work on display. The school office announces the schedule on its official channels. Families are warmly welcome to attend.",
+      "date_label": "Date announced by the school office",
+      "date_value": null,
+      "location": "Ali Baba Stadium, Orangi Town No. 4, Karachi",
+      "category": "Open House",
+      "image": "/assets/img/sports-ground.jpg",
+      "published": 1,
+      "created_at": "2026-09-22 11:33:02"
+    },
+    {
+      "id": 2,
+      "title": "Monthly Open House",
+      "slug": "monthly-open-house",
+      "description": "Every month the school opens its doors to parents and guardians. The Monthly Open House is a standing opportunity to review a child’s progress, meet class teachers, and discuss upcoming academic milestones with the school’s administration. Contact your campus for this month’s date.",
+      "date_label": "Held monthly — dates from the campus office",
+      "date_value": null,
+      "location": "All BM Grammar School campuses",
+      "category": "Open House",
+      "image": "/assets/img/library-reading.jpg",
+      "published": 1,
+      "created_at": "2026-09-22 11:33:02"
+    }
+  ],
+  "gallery_images": [
+    {
+      "id": 1,
+      "title": "A bright, attentive classroom",
+      "image_url": "/assets/img/hero-classroom.jpg",
+      "category": "Classrooms",
+      "caption": "Representational image of a welcoming classroom environment.",
+      "alt_text": "A teacher standing with a group of uniformed schoolchildren in a bright classroom",
+      "representative": 1,
+      "published": 1,
+      "created_at": "2026-09-22 11:33:02"
+    },
+    {
+      "id": 2,
+      "title": "Reading together in the library",
+      "image_url": "/assets/img/library-reading.jpg",
+      "category": "Learning",
+      "caption": "Representational image of guided reading.",
+      "alt_text": "A teacher reading a book with a circle of children on a library floor",
+      "representative": 1,
+      "published": 1,
+      "created_at": "2026-09-22 11:33:02"
+    },
+    {
+      "id": 3,
+      "title": "Early learning, hands-on",
+      "image_url": "/assets/img/montessori-learning.jpg",
+      "category": "Students",
+      "caption": "Representational image of early-years number work.",
+      "alt_text": "A young child arranging wooden number cards on a floor mat",
+      "representative": 1,
+      "published": 1,
+      "created_at": "2026-09-22 11:33:02"
+    },
+    {
+      "id": 4,
+      "title": "Science inquiry",
+      "image_url": "/assets/img/science-lab.jpg",
+      "category": "Activities",
+      "caption": "Representational image of practical science work.",
+      "alt_text": "Schoolchildren using microscopes during a science lesson",
+      "representative": 1,
+      "published": 1,
+      "created_at": "2026-09-22 11:33:02"
+    },
+    {
+      "id": 5,
+      "title": "At the board",
+      "image_url": "/assets/img/secondary-blackboard.jpg",
+      "category": "Classrooms",
+      "caption": "Representational image of secondary-level classwork.",
+      "alt_text": "A secondary student writing at a chalkboard while a teacher looks on",
+      "representative": 1,
+      "published": 1,
+      "created_at": "2026-09-22 11:33:02"
+    },
+    {
+      "id": 6,
+      "title": "Examination discipline",
+      "image_url": "/assets/img/matric-exam.jpg",
+      "category": "Learning",
+      "caption": "Representational image of focused assessment.",
+      "alt_text": "Close view of students’ hands writing in examination notebooks",
+      "representative": 1,
+      "published": 1,
+      "created_at": "2026-09-22 11:33:02"
+    },
+    {
+      "id": 7,
+      "title": "Games and sports period",
+      "image_url": "/assets/img/sports-ground.jpg",
+      "category": "Activities",
+      "caption": "Representational image of outdoor games.",
+      "alt_text": "Schoolchildren playing football on a school playground with a teacher",
+      "representative": 1,
+      "published": 1,
+      "created_at": "2026-09-22 11:33:02"
+    },
+    {
+      "id": 8,
+      "title": "A professional teaching environment",
+      "image_url": "/assets/img/teacher-classroom.jpg",
+      "category": "Campus",
+      "caption": "Representational image of a prepared classroom.",
+      "alt_text": "A teacher standing beside a desk in front of a classroom board",
+      "representative": 1,
+      "published": 1,
+      "created_at": "2026-09-22 11:33:02"
+    }
+  ],
+  "notices": [],
+  "faculty": [
+    {
+      "id": 1,
+      "name": "Shakeel Ahmed Bhatti",
+      "position": "Principal",
+      "qualification": null,
+      "subject": null,
+      "photo": null,
+      "bio": "Shakeel Ahmed Bhatti leads BM Grammar School as its Principal, overseeing the school’s campuses and its Montessori-to-Matric programme. A full biography will be published by the school office.",
+      "published": 1
+    }
+  ],
+  "faqs": [
+    {
+      "id": 1,
+      "question": "Which classes does BM Grammar School offer?",
+      "answer": "The school provides education from Montessori through Matric, covering early years, primary, middle and secondary levels, including Matriculation preparation.",
+      "category": "Academics",
+      "published": 1,
+      "sort_order": 1
+    },
+    {
+      "id": 2,
+      "question": "Are classes separate for boys and girls?",
+      "answer": "Yes. The school provides separate classes for boys and girls, with a positive and disciplined learning environment.",
+      "category": "Academics",
+      "published": 1,
+      "sort_order": 2
+    },
+    {
+      "id": 3,
+      "question": "Is there an admission fee?",
+      "answer": "Admission is free. Families can start an application online through this website or visit any campus office for assistance.",
+      "category": "Admissions",
+      "published": 1,
+      "sort_order": 3
+    },
+    {
+      "id": 4,
+      "question": "Where are the school’s campuses located?",
+      "answer": "BM Grammar School serves families from three campuses: Al Sadaf Colony, Mominabad and Orangi Town, Karachi. The documented Orangi Town campus address is Plot No. 518, Sector No. 4/F, Islam Nagar, Orangi Town.",
+      "category": "Campuses",
+      "published": 1,
+      "sort_order": 4
+    },
+    {
+      "id": 5,
+      "question": "How do I apply for admission?",
+      "answer": "Choose “Apply Online”, create a parent account, select a campus and class, complete the student and guardian details, and submit. You will receive a reference number such as BM-2026-XXXXXX to track the application from your dashboard.",
+      "category": "Applications",
+      "published": 1,
+      "sort_order": 5
+    },
+    {
+      "id": 6,
+      "question": "How can I track my admission application?",
+      "answer": "Sign in and open your dashboard. Every application shows its current status: Submitted, Under Review, Accepted or Rejected.",
+      "category": "Applications",
+      "published": 1,
+      "sort_order": 6
+    },
+    {
+      "id": 7,
+      "question": "What is the Monthly Open House?",
+      "answer": "The school holds a Monthly Open House where parents meet teachers and review student progress. A larger Open House event is also held at Ali Baba Stadium, Orangi Town No. 4. Dates are announced by the school office.",
+      "category": "Events",
+      "published": 1,
+      "sort_order": 7
+    },
+    {
+      "id": 8,
+      "question": "How can I contact the school?",
+      "answer": "Call the school office on 0312-2690757, write through the contact form on this website, or email bmgsone1@yahoo.com.",
+      "category": "Contact",
+      "published": 1,
+      "sort_order": 8
+    }
+  ],
+  "admission_applications": [
+    {
+      "id": 1,
+      "user_id": 1,
+      "idempotency_key": "52dd8a36-15c5-48ac-92b4-dfa734ed8253",
+      "reference_number": "BM-2026-5QWBW6",
+      "student_name": "sufyan",
+      "date_of_birth": "2009-10-10",
+      "gender": "Male",
+      "previous_school": "no",
+      "previous_class": "",
+      "applying_class": "Class 5",
+      "parent_name": "sufyan",
+      "relationship": "Other",
+      "phone": "0312345678",
+      "email": "sufyan@gmail.com",
+      "address": "house no 0 street no 10 , karachi,pakistan",
+      "campus_id": 1,
+      "notes": "",
+      "status": "submitted",
+      "created_at": "2026-09-22 13:48:20",
+      "updated_at": "2026-09-22 13:48:20"
+    },
+    {
+      "id": 2,
+      "user_id": 2,
+      "idempotency_key": "fb1c2e3d-8bf3-490b-9a77-0b9c996692db",
+      "reference_number": "BM-2026-7GCUX8",
+      "student_name": "meebi",
+      "date_of_birth": "2015-02-02",
+      "gender": "Male",
+      "previous_school": "no",
+      "previous_class": "",
+      "applying_class": "Class 8",
+      "parent_name": "meebi",
+      "relationship": "Other",
+      "phone": "0312345673",
+      "email": "meebi@gmail.com",
+      "address": "house 0 , karachi , pakistan",
+      "campus_id": 2,
+      "notes": "",
+      "status": "",
+      "created_at": "",
+      "updated_at": ""
+    }
+  ],
+  "contact_messages": [],
+  "users": [
+    {
+      "id": 1,
+      "name": "sufyan",
+      "email": "sufyan@gmail.com",
+      "password_hash": "scrypt:9708c4426be12a4b480d5c7bf6e0715a:00a41f8707bb1adf82e812c30b99dad59925581ecae8caca3f0b0fa5e8a7640fc2f179148515b5383e295af5401c5092c08d9d086b7a6c3f6b70f1f59b05a1b3",
+      "phone": null,
+      "role": "USER",
+      "created_at": "2026-09-22 13:09:32",
+      "updated_at": "2026-09-22 13:09:32"
+    },
+    {
+      "id": 2,
+      "name": "meebi",
+      "email": "meebi@gmail.com",
+      "password_hash": "scrypt:bae25a70ab9f246275258f965254c1cd:28cad936eee67866ac9d3dc97b87e15249d4bba85e9bc66134be8c97ad2a169f4f47262fca098cb6c495040d5aeaa01d4455976aa5f9a7797c324210e081f841",
+      "phone": null,
+      "role": "USER",
+      "created_at": "",
+      "updated_at": ""
+    }
+  ]
+}
