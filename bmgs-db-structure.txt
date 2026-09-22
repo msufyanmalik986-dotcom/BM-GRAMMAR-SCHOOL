@@ -1,0 +1,156 @@
+BM GRAMMAR SCHOOL DATABASE
+===========================
+Tables found: 12
+
+TABLE: admission_applications
+---------------------------
+COLUMN: id | TYPE: INTEGER | PK: 1 | NOTNULL: 0 | DEFAULT: NULL
+COLUMN: user_id | TYPE: INTEGER | PK: 0 | NOTNULL: 1 | DEFAULT: NULL
+COLUMN: idempotency_key | TYPE: TEXT | PK: 0 | NOTNULL: 0 | DEFAULT: NULL
+COLUMN: reference_number | TYPE: TEXT | PK: 0 | NOTNULL: 1 | DEFAULT: NULL
+COLUMN: student_name | TYPE: TEXT | PK: 0 | NOTNULL: 1 | DEFAULT: NULL
+COLUMN: date_of_birth | TYPE: TEXT | PK: 0 | NOTNULL: 0 | DEFAULT: NULL
+COLUMN: gender | TYPE: TEXT | PK: 0 | NOTNULL: 0 | DEFAULT: NULL
+COLUMN: previous_school | TYPE: TEXT | PK: 0 | NOTNULL: 0 | DEFAULT: NULL
+COLUMN: previous_class | TYPE: TEXT | PK: 0 | NOTNULL: 0 | DEFAULT: NULL
+COLUMN: applying_class | TYPE: TEXT | PK: 0 | NOTNULL: 1 | DEFAULT: NULL
+COLUMN: parent_name | TYPE: TEXT | PK: 0 | NOTNULL: 1 | DEFAULT: NULL
+COLUMN: relationship | TYPE: TEXT | PK: 0 | NOTNULL: 0 | DEFAULT: NULL
+COLUMN: phone | TYPE: TEXT | PK: 0 | NOTNULL: 1 | DEFAULT: NULL
+COLUMN: email | TYPE: TEXT | PK: 0 | NOTNULL: 0 | DEFAULT: NULL
+COLUMN: address | TYPE: TEXT | PK: 0 | NOTNULL: 0 | DEFAULT: NULL
+COLUMN: campus_id | TYPE: INTEGER | PK: 0 | NOTNULL: 1 | DEFAULT: NULL
+COLUMN: notes | TYPE: TEXT | PK: 0 | NOTNULL: 0 | DEFAULT: NULL
+COLUMN: status | TYPE: TEXT | PK: 0 | NOTNULL: 1 | DEFAULT: 'submitted'
+COLUMN: created_at | TYPE: TEXT | PK: 0 | NOTNULL: 1 | DEFAULT: datetime('now')
+COLUMN: updated_at | TYPE: TEXT | PK: 0 | NOTNULL: 1 | DEFAULT: datetime('now')
+ROWS: 1
+
+TABLE: branches
+---------------------------
+COLUMN: id | TYPE: INTEGER | PK: 1 | NOTNULL: 0 | DEFAULT: NULL
+COLUMN: name | TYPE: TEXT | PK: 0 | NOTNULL: 1 | DEFAULT: NULL
+COLUMN: slug | TYPE: TEXT | PK: 0 | NOTNULL: 1 | DEFAULT: NULL
+COLUMN: address | TYPE: TEXT | PK: 0 | NOTNULL: 0 | DEFAULT: NULL
+COLUMN: phone | TYPE: TEXT | PK: 0 | NOTNULL: 0 | DEFAULT: NULL
+COLUMN: latitude | TYPE: REAL | PK: 0 | NOTNULL: 0 | DEFAULT: NULL
+COLUMN: longitude | TYPE: REAL | PK: 0 | NOTNULL: 0 | DEFAULT: NULL
+COLUMN: map_query | TYPE: TEXT | PK: 0 | NOTNULL: 0 | DEFAULT: NULL
+COLUMN: description | TYPE: TEXT | PK: 0 | NOTNULL: 0 | DEFAULT: NULL
+COLUMN: image | TYPE: TEXT | PK: 0 | NOTNULL: 0 | DEFAULT: NULL
+COLUMN: active | TYPE: INTEGER | PK: 0 | NOTNULL: 1 | DEFAULT: 1
+COLUMN: created_at | TYPE: TEXT | PK: 0 | NOTNULL: 1 | DEFAULT: datetime('now')
+COLUMN: updated_at | TYPE: TEXT | PK: 0 | NOTNULL: 1 | DEFAULT: datetime('now')
+ROWS: 3
+
+TABLE: contact_messages
+---------------------------
+COLUMN: id | TYPE: INTEGER | PK: 1 | NOTNULL: 0 | DEFAULT: NULL
+COLUMN: name | TYPE: TEXT | PK: 0 | NOTNULL: 1 | DEFAULT: NULL
+COLUMN: email | TYPE: TEXT | PK: 0 | NOTNULL: 1 | DEFAULT: NULL
+COLUMN: phone | TYPE: TEXT | PK: 0 | NOTNULL: 0 | DEFAULT: NULL
+COLUMN: subject | TYPE: TEXT | PK: 0 | NOTNULL: 0 | DEFAULT: NULL
+COLUMN: message | TYPE: TEXT | PK: 0 | NOTNULL: 1 | DEFAULT: NULL
+COLUMN: status | TYPE: TEXT | PK: 0 | NOTNULL: 1 | DEFAULT: 'new'
+COLUMN: created_at | TYPE: TEXT | PK: 0 | NOTNULL: 1 | DEFAULT: datetime('now')
+ROWS: 0
+
+TABLE: events
+---------------------------
+COLUMN: id | TYPE: INTEGER | PK: 1 | NOTNULL: 0 | DEFAULT: NULL
+COLUMN: title | TYPE: TEXT | PK: 0 | NOTNULL: 1 | DEFAULT: NULL
+COLUMN: slug | TYPE: TEXT | PK: 0 | NOTNULL: 1 | DEFAULT: NULL
+COLUMN: description | TYPE: TEXT | PK: 0 | NOTNULL: 0 | DEFAULT: NULL
+COLUMN: date_label | TYPE: TEXT | PK: 0 | NOTNULL: 0 | DEFAULT: NULL
+COLUMN: date_value | TYPE: TEXT | PK: 0 | NOTNULL: 0 | DEFAULT: NULL
+COLUMN: location | TYPE: TEXT | PK: 0 | NOTNULL: 0 | DEFAULT: NULL
+COLUMN: category | TYPE: TEXT | PK: 0 | NOTNULL: 0 | DEFAULT: NULL
+COLUMN: image | TYPE: TEXT | PK: 0 | NOTNULL: 0 | DEFAULT: NULL
+COLUMN: published | TYPE: INTEGER | PK: 0 | NOTNULL: 1 | DEFAULT: 1
+COLUMN: created_at | TYPE: TEXT | PK: 0 | NOTNULL: 1 | DEFAULT: datetime('now')
+ROWS: 2
+
+TABLE: faculty
+---------------------------
+COLUMN: id | TYPE: INTEGER | PK: 1 | NOTNULL: 0 | DEFAULT: NULL
+COLUMN: name | TYPE: TEXT | PK: 0 | NOTNULL: 1 | DEFAULT: NULL
+COLUMN: position | TYPE: TEXT | PK: 0 | NOTNULL: 0 | DEFAULT: NULL
+COLUMN: qualification | TYPE: TEXT | PK: 0 | NOTNULL: 0 | DEFAULT: NULL
+COLUMN: subject | TYPE: TEXT | PK: 0 | NOTNULL: 0 | DEFAULT: NULL
+COLUMN: photo | TYPE: TEXT | PK: 0 | NOTNULL: 0 | DEFAULT: NULL
+COLUMN: bio | TYPE: TEXT | PK: 0 | NOTNULL: 0 | DEFAULT: NULL
+COLUMN: published | TYPE: INTEGER | PK: 0 | NOTNULL: 1 | DEFAULT: 1
+ROWS: 1
+
+TABLE: faqs
+---------------------------
+COLUMN: id | TYPE: INTEGER | PK: 1 | NOTNULL: 0 | DEFAULT: NULL
+COLUMN: question | TYPE: TEXT | PK: 0 | NOTNULL: 1 | DEFAULT: NULL
+COLUMN: answer | TYPE: TEXT | PK: 0 | NOTNULL: 1 | DEFAULT: NULL
+COLUMN: category | TYPE: TEXT | PK: 0 | NOTNULL: 0 | DEFAULT: NULL
+COLUMN: published | TYPE: INTEGER | PK: 0 | NOTNULL: 1 | DEFAULT: 1
+COLUMN: sort_order | TYPE: INTEGER | PK: 0 | NOTNULL: 1 | DEFAULT: 0
+ROWS: 8
+
+TABLE: gallery_images
+---------------------------
+COLUMN: id | TYPE: INTEGER | PK: 1 | NOTNULL: 0 | DEFAULT: NULL
+COLUMN: title | TYPE: TEXT | PK: 0 | NOTNULL: 1 | DEFAULT: NULL
+COLUMN: image_url | TYPE: TEXT | PK: 0 | NOTNULL: 1 | DEFAULT: NULL
+COLUMN: category | TYPE: TEXT | PK: 0 | NOTNULL: 1 | DEFAULT: NULL
+COLUMN: caption | TYPE: TEXT | PK: 0 | NOTNULL: 0 | DEFAULT: NULL
+COLUMN: alt_text | TYPE: TEXT | PK: 0 | NOTNULL: 1 | DEFAULT: NULL
+COLUMN: representative | TYPE: INTEGER | PK: 0 | NOTNULL: 1 | DEFAULT: 0
+COLUMN: published | TYPE: INTEGER | PK: 0 | NOTNULL: 1 | DEFAULT: 1
+COLUMN: created_at | TYPE: TEXT | PK: 0 | NOTNULL: 1 | DEFAULT: datetime('now')
+ROWS: 8
+
+TABLE: notices
+---------------------------
+COLUMN: id | TYPE: INTEGER | PK: 1 | NOTNULL: 0 | DEFAULT: NULL
+COLUMN: title | TYPE: TEXT | PK: 0 | NOTNULL: 1 | DEFAULT: NULL
+COLUMN: slug | TYPE: TEXT | PK: 0 | NOTNULL: 1 | DEFAULT: NULL
+COLUMN: content | TYPE: TEXT | PK: 0 | NOTNULL: 0 | DEFAULT: NULL
+COLUMN: category | TYPE: TEXT | PK: 0 | NOTNULL: 0 | DEFAULT: NULL
+COLUMN: published | TYPE: INTEGER | PK: 0 | NOTNULL: 1 | DEFAULT: 1
+COLUMN: published_at | TYPE: TEXT | PK: 0 | NOTNULL: 0 | DEFAULT: NULL
+COLUMN: created_at | TYPE: TEXT | PK: 0 | NOTNULL: 1 | DEFAULT: datetime('now')
+COLUMN: updated_at | TYPE: TEXT | PK: 0 | NOTNULL: 1 | DEFAULT: datetime('now')
+ROWS: 0
+
+TABLE: password_resets
+---------------------------
+COLUMN: id | TYPE: INTEGER | PK: 1 | NOTNULL: 0 | DEFAULT: NULL
+COLUMN: user_id | TYPE: INTEGER | PK: 0 | NOTNULL: 1 | DEFAULT: NULL
+COLUMN: token | TYPE: TEXT | PK: 0 | NOTNULL: 1 | DEFAULT: NULL
+COLUMN: expires_at | TYPE: TEXT | PK: 0 | NOTNULL: 1 | DEFAULT: NULL
+COLUMN: used | TYPE: INTEGER | PK: 0 | NOTNULL: 1 | DEFAULT: 0
+COLUMN: created_at | TYPE: TEXT | PK: 0 | NOTNULL: 1 | DEFAULT: datetime('now')
+ROWS: 0
+
+TABLE: schema_migrations
+---------------------------
+COLUMN: version | TYPE: INTEGER | PK: 1 | NOTNULL: 0 | DEFAULT: NULL
+COLUMN: applied_at | TYPE: TEXT | PK: 0 | NOTNULL: 1 | DEFAULT: NULL
+ROWS: 0
+
+TABLE: sessions
+---------------------------
+COLUMN: id | TYPE: TEXT | PK: 1 | NOTNULL: 0 | DEFAULT: NULL
+COLUMN: user_id | TYPE: INTEGER | PK: 0 | NOTNULL: 1 | DEFAULT: NULL
+COLUMN: expires_at | TYPE: TEXT | PK: 0 | NOTNULL: 1 | DEFAULT: NULL
+COLUMN: created_at | TYPE: TEXT | PK: 0 | NOTNULL: 1 | DEFAULT: datetime('now')
+ROWS: 0
+
+TABLE: users
+---------------------------
+COLUMN: id | TYPE: INTEGER | PK: 1 | NOTNULL: 0 | DEFAULT: NULL
+COLUMN: name | TYPE: TEXT | PK: 0 | NOTNULL: 1 | DEFAULT: NULL
+COLUMN: email | TYPE: TEXT | PK: 0 | NOTNULL: 1 | DEFAULT: NULL
+COLUMN: password_hash | TYPE: TEXT | PK: 0 | NOTNULL: 1 | DEFAULT: NULL
+COLUMN: phone | TYPE: TEXT | PK: 0 | NOTNULL: 0 | DEFAULT: NULL
+COLUMN: role | TYPE: TEXT | PK: 0 | NOTNULL: 1 | DEFAULT: 'USER'
+COLUMN: created_at | TYPE: TEXT | PK: 0 | NOTNULL: 1 | DEFAULT: datetime('now')
+COLUMN: updated_at | TYPE: TEXT | PK: 0 | NOTNULL: 1 | DEFAULT: datetime('now')
+ROWS: 1
+
